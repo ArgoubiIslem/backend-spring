@@ -1,0 +1,28 @@
+server:
+  port: 8081
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/backendbd
+    username: postgres
+    password: backend
+  jpa:
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+
+sergio:
+  app:
+    jwtSecret: ======================sergio=Spring===========================
+    jwtExpirationMs: 86400000
+
+
+
+
+
+
+
