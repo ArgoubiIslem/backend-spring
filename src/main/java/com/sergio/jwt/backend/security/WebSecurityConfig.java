@@ -69,6 +69,11 @@ public class WebSecurityConfig {
                 .authorizeHttpRequests(auth ->
                         auth.requestMatchers("/api/auth/**").permitAll()
                                 .requestMatchers("/api/test/**").permitAll()
+                                .requestMatchers("/api/biens/**").permitAll()
+                                .requestMatchers("/api/activities/**").permitAll()
+                                .requestMatchers("/api/property-payments/**").permitAll()
+                                .requestMatchers("/api/rental-contracts/**").permitAll()
+
                                 .anyRequest().authenticated()
                 );
 
